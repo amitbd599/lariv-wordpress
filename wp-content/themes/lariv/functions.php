@@ -46,8 +46,6 @@ if ( !function_exists( 'lariv_setup' ) ):
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus( [
             'main-menu' => esc_html__( 'Main Menu', 'lariv' ),
-            'category-menu' => esc_html__( 'Category Menu', 'lariv' ),
-            'footer-menu' => esc_html__( 'Footer Menu', 'lariv' ),
         ] );
 
         /*

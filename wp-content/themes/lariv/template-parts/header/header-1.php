@@ -35,15 +35,13 @@
           class="flex justify-between rounded-[10px] bg-card px-[15px] py-[30px] md:px-[30px]"
         >
           <div class="logo flex items-center">
-            <a href="index.html">
-              <img
-                src="assets/images/logo.svg"
-                alt="Lariv - React Portfolio Template"
-              />
-            </a>
+            <?php lariv_header_logo();?>
           </div>
           <div class="hidden items-center lg:flex">
-            <ul class="flex gap-[40px]">
+            <nav class="main-menu">
+              <?php lariv_header_menu(); ?>
+            </nav>
+            <!-- <ul class="flex gap-[40px]">
               <li>
                 <a href="index.html" class="navActive">Home</a>
               </li>
@@ -62,7 +60,7 @@
               <li>
                 <a href="contact.html" class="navNotActive">Contact</a>
               </li>
-            </ul>
+            </ul> -->
           </div>
           <div class="block lg:hidden">
             <div class="flex items-center gap-4 px-[10px]">

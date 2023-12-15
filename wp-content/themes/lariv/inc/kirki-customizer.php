@@ -64,8 +64,8 @@ function lariv_customizer_panels_sections( $wp_customize ) {
         'panel'       => 'lariv_customizer',
     ] );
 
-    $wp_customize->add_section( 'breadcrumb_setting', [
-        'title'       => esc_html__( 'Breadcrumb Setting', 'lariv' ),
+    $wp_customize->add_section( 'background_image_setting', [
+        'title'       => esc_html__( 'Background Image Setting', 'lariv' ),
         'description' => '',
         'priority'    => 15,
         'capability'  => 'edit_theme_options',
@@ -383,21 +383,7 @@ add_filter( 'kirki/fields', '_header_social_fields' );
 Header Settings
  */
 function _header_header_fields( $fields ) {
-    $fields[] = [
-        'type'        => 'radio-image',
-        'settings'    => 'choose_default_header',
-        'label'       => esc_html__( 'Select Header Style', 'lariv' ),
-        'section'     => 'section_header_logo',
-        'placeholder' => esc_html__( 'Select an option...', 'lariv' ),
-        'priority'    => 10,
-        'multiple'    => 1,
-        'choices'     => [
-            'header-style-1'   => get_template_directory_uri() . '/inc/img/header/header-1.png',
-            'header-style-2' => get_template_directory_uri() . '/inc/img/header/header-2.png',
-            'header-style-3'  => get_template_directory_uri() . '/inc/img/header/header-3.png'
-        ],
-        'default'     => 'header-style-1',
-    ];
+   
 
     $fields[] = [
         'type'        => 'image',
@@ -405,7 +391,7 @@ function _header_header_fields( $fields ) {
         'label'       => esc_html__( 'Header Logo', 'lariv' ),
         'description' => esc_html__( 'Upload Your Logo.', 'lariv' ),
         'section'     => 'section_header_logo',
-        'default'     => get_template_directory_uri() . '/assets/img/logo/logo.png',
+        'default'     => get_template_directory_uri() . '/assets/images/logo.svg',
     ];
 
     $fields[] = [
@@ -414,131 +400,44 @@ function _header_header_fields( $fields ) {
         'label'       => esc_html__( 'Header Secondary Logo', 'lariv' ),
         'description' => esc_html__( 'Header Logo Black', 'lariv' ),
         'section'     => 'section_header_logo',
-        'default'     => get_template_directory_uri() . '/assets/img/logo/logo-2.png',
+        'default'     => get_template_directory_uri() . '/assets/images/logo-dark.svg',
     ];
 
-    $fields[] = [
-        'type'        => 'image',
-        'settings'    => 'preloader_logo',
-        'label'       => esc_html__( 'Preloader Logo', 'lariv' ),
-        'description' => esc_html__( 'Upload Preloader Logo.', 'lariv' ),
-        'section'     => 'section_header_logo',
-        'default'     => get_template_directory_uri() . '/assets/img/favicon.png',
-    ];
+  
 
     return $fields;
 }
 add_filter( 'kirki/fields', '_header_header_fields' );
 
-/*
-Header Side Info
- */
-function _header_side_fields( $fields ) {
-    // side info settings
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'lariv_side_hide',
-        'label'    => esc_html__( 'Side Info On/Off', 'lariv' ),
-        'section'  => 'header_side_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'lariv' ),
-            'off' => esc_html__( 'Disable', 'lariv' ),
-        ],
-    ];  
-    $fields[] = [
-        'type'        => 'image',
-        'settings'    => 'lariv_side_logo',
-        'label'       => esc_html__( 'Logo Side', 'lariv' ),
-        'description' => esc_html__( 'Logo Side', 'lariv' ),
-        'section'     => 'header_side_setting',
-        'default'     => get_template_directory_uri() . '/assets/img/logo/logo.png',
-    ];
-    $fields[] = [
-        'type'     => 'textarea',
-        'settings' => 'lariv_extra_about_text',
-        'label'    => esc_html__( 'Side Description Text', 'lariv' ),
-        'section'  => 'header_side_setting',
-        'default'  => esc_html__( 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and will give you a complete account of the system and expound the actual teachings of the great explore', 'lariv' ),
-        'priority' => 10,
-    ];
-
-    $fields[] = [
-        'type'     => 'textarea',
-        'settings' => 'lariv_extra_map',
-        'label'    => esc_html__( 'Map Address Iframe', 'lariv' ),
-        'section'  => 'header_side_setting',
-        'default'  => esc_html__( '#', 'lariv' ),
-        'priority' => 10,
-    ];
-
-    // contact
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'lariv_contact_title',
-        'label'    => esc_html__( 'Contact Title', 'lariv' ),
-        'section'  => 'header_side_setting',
-        'default'  => esc_html__( 'Contact Title', 'lariv' ),
-        'priority' => 10,
-    ];
-    $fields[] = [
-        'type'     => 'textarea',
-        'settings' => 'lariv_extra_address',
-        'label'    => esc_html__( 'Office Address', 'lariv' ),
-        'section'  => 'header_side_setting',
-        'default'  => esc_html__( '12/A, Mirnada City Tower, NYC', 'lariv' ),
-        'priority' => 10,
-    ];
-    $fields[] = [
-        'type'     => 'textarea',
-        'settings' => 'lariv_extra_phone',
-        'label'    => esc_html__( 'Phone Number', 'lariv' ),
-        'section'  => 'header_side_setting',
-        'default'  => esc_html__( '+0989 7876 9865 9', 'lariv' ),
-        'priority' => 10,
-    ];
-
-    $fields[] = [
-        'type'     => 'textarea',
-        'settings' => 'lariv_extra_email',
-        'label'    => esc_html__( 'Email ID', 'lariv' ),
-        'section'  => 'header_side_setting',
-        'default'  => esc_html__( 'info@weblearnbd.net', 'lariv' ),
-        'priority' => 10,
-    ];
-    return $fields;
-}
-add_filter( 'kirki/fields', '_header_side_fields' );
 
 /*
 _header_page_title_fields
  */
 function _header_page_title_fields( $fields ) {
-    // Breadcrumb Setting
+    // background image setting
     $fields[] = [
         'type'        => 'image',
-        'settings'    => 'breadcrumb_bg_img',
-        'label'       => esc_html__( 'Breadcrumb Background Image', 'lariv' ),
-        'description' => esc_html__( 'Breadcrumb Background Image', 'lariv' ),
-        'section'     => 'breadcrumb_setting',
+        'settings'    => 'background_bg_img',
+        'label'       => esc_html__( 'Background Image', 'lariv' ),
+        'description' => esc_html__( 'Background Image', 'lariv' ),
+        'section'     => 'background_image_setting',
         'default'     => get_template_directory_uri() . '/assets/img/page-title/page-title.jpg',
     ];
     $fields[] = [
         'type'        => 'color',
-        'settings'    => 'lariv_breadcrumb_bg_color',
+        'settings'    => 'lariv_background_bg_color',
         'label'       => __( 'Breadcrumb BG Color', 'lariv' ),
         'description' => esc_html__( 'This is a Breadcrumb bg color control.', 'lariv' ),
-        'section'     => 'breadcrumb_setting',
+        'section'     => 'background_image_setting',
         'default'     => '#f4f9fc',
         'priority'    => 10,
     ];
 
     $fields[] = [
         'type'     => 'switch',
-        'settings' => 'breadcrumb_info_switch',
-        'label'    => esc_html__( 'Breadcrumb Info switch', 'lariv' ),
-        'section'  => 'breadcrumb_setting',
+        'settings' => 'background_info_switch',
+        'label'    => esc_html__( 'Background Info switch', 'lariv' ),
+        'section'  => 'background_image_setting',
         'default'  => '1',
         'priority' => 10,
         'choices'  => [
@@ -549,9 +448,9 @@ function _header_page_title_fields( $fields ) {
 
     $fields[] = [
         'type'     => 'switch',
-        'settings' => 'breadcrumb_switch',
-        'label'    => esc_html__( 'Breadcrumb Hide', 'lariv' ),
-        'section'  => 'breadcrumb_setting',
+        'settings' => 'background_switch',
+        'label'    => esc_html__( 'Background Hide', 'lariv' ),
+        'section'  => 'background_image_setting',
         'default'  => '1',
         'priority' => 10,
         'choices'  => [

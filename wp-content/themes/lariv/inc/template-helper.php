@@ -96,7 +96,7 @@ add_action( 'lariv_language', 'lariv_language_list' );
 function lariv_header_logo() { ?>
       <?php
         $lariv_logo_on = function_exists( 'get_field' ) ? get_field( 'is_enable_sec_logo' ) : NULL;
-        $lariv_logo = get_template_directory_uri() . '/assets/img/logo/logo.png';
+        $lariv_logo = get_template_directory_uri() . '/assets/images/logo.svg';
         $lariv_logo_black = get_template_directory_uri() . '/assets/img/logo/logo-white.png';
 
         $lariv_site_logo = get_theme_mod( 'logo', $lariv_logo );
