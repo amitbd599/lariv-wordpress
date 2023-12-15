@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Home || Lariv - HTML Portfolio Web Template</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Place favicon.ico in the root directory -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/favicon.ico"
+    />
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> href improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Preloader Start-->
+
+    <div class="InitLoader">
+      <div class="fingerprint-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+      </div>
+    </div>
+
+    <!-- back href top start  -->
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <!-- back href top end -->
+
+    <!-- Bg image start-->
+    <div
+      class="bg-img"
+      style="background-image: url('assets/images/show/bg.png')"
+    ></div>
+    <!-- Bg image end-->
+
+    <!-- header-area-start -->
+    <header class="relative z-[99]">
+      <div class="container mx-auto pt-[30px]">
+        <div
+          class="flex justify-between rounded-[10px] bg-card px-[15px] py-[30px] md:px-[30px]"
+        >
+          <div class="logo flex items-center">
+            <a href="index.html">
+              <img
+                src="assets/images/logo.svg"
+                alt="Lariv - React Portfolio Template"
+              />
+            </a>
+          </div>
+          <div class="hidden items-center lg:flex">
+            <ul class="flex gap-[40px]">
+              <li>
+                <a href="index.html" class="navNotActive">Home</a>
+              </li>
+              <li>
+                <a href="about.html" class="navActive">About Us</a>
+              </li>
+              <li>
+                <a href="portfolio.html" class="navNotActive">Portfolio</a>
+              </li>
+              <li>
+                <a href="service.html" class="navNotActive">Service</a>
+              </li>
+              <li>
+                <a href="blog.html" class="navNotActive">Blog</a>
+              </li>
+              <li>
+                <a href="contact.html" class="navNotActive">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="block lg:hidden">
+            <div class="flex items-center gap-4 px-[10px]">
+              <span
+                class="sidebar-open rounded-full border border-[#919295] flex justify-center items-center w-[50px] h-[50px]"
+              >
+                <i class="fa-light fa-bars-sort text-text text-[22px]"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header-area-end -->
+
+    <!-- side bar start -->
+    <div
+      class="sidebar fixed left-[100%] top-0 z-[999] h-full w-full bg-btn/60 transition-all duration-500"
+    >
+      <div
+        class="ml-auto h-full min-h-[750px] w-[300px] bg-card px-[30px] pt-[60px] md:min-h-[700px]"
+      >
+        <div class="relative flex justify-center">
+          <span
+            class="sidebar-close group absolute left-[-78px] rounded-lg bg-card px-[15px] py-[10px] text-[26px]"
+          >
+            <i
+              class="fa-regular fa-xmark text-white transition-all duration-500 group-hover:rotate-90 group-hover:text-theme"
+            ></i>
+          </span>
+          <div>
+            <img
+              src="assets/images/logo.svg"
+              alt="Lariv - React Portfolio Template"
+            />
+          </div>
+        </div>
+        <div class="my-[30px] border-t border-[#ddd]"></div>
+        <nav class="mt-[30px]">
+          <ul class="grid gap-[24px]">
+            <li class="text-[18px] font-semibold">
+              <a href="index.html" class="navNotActive">Home</a>
+            </li>
+            <li class="text-[18px] font-semibold">
+              <a href="about.html" class="navActive">About Us</a>
+            </li>
+            <li class="text-[18px] font-semibold">
+              <a href="portfolio.html" class="navNotActive">Portfolio</a>
+            </li>
+            <li class="text-[18px] font-semibold">
+              <a href="service.html" class="navNotActive">Service</a>
+            </li>
+            <li class="text-[18px] font-semibold">
+              <a href="blog.html" class="navNotActive">Blog</a>
+            </li>
+            <li class="text-[18px] font-semibold">
+              <a href="contact.html" class="navNotActive">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="my-[30px] border-t border-[#ddd]"></div>
+
+        <div class="contact mt-[40px] pb-[20px] md:mt-[0px]">
+          <div>
+            <p class="text-[20px] font-semibold text-white">Follow Me:</p>
+
+            <div class="mt-[20px] flex gap-3">
+              <a href="#">
+                <button
+                  class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
+                >
+                  <i class="fa-brands fa-facebook-f text-[22px]"></i>
+                </button>
+              </a>
+              <a href="#">
+                <button
+                  class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
+                >
+                  <i class="fa-brands fa-twitter text-[22px]"></i>
+                </button>
+              </a>
+              <a href="#">
+                <button
+                  class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
+                >
+                  <i class="fa-brands fa-linkedin-in text-[22px]"></i>
+                </button>
+              </a>
+              <a href="#">
+                <button
+                  class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
+                >
+                  <i class="fa-brands fa-instagram text-[22px]"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- side bar end -->
+
+    <main>
+      <section class="py-[30px] md:py-[80px]">
+        <div class="container">
+          <div class="grid grid-cols-12 gap-[20px]">
+            <div class="col-span-12 lg:col-span-4 lg:pr-[30px]">
+              <div
+                class="menuBox wow animated fadeInUp"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.3s"
+              >
+                <div
+                  class="inline-block rounded-full border border-text px-[20px] py-[5px]"
+                >
+                  <div class="flex items-center gap-[6px]">
+                    <span>
+                      <i class="fa-regular fa-user text-[14px] text-white"></i>
+                    </span>
+                    <span class="pl-[6px] text-[14px] text-white">
+                      About Us
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <!-- Profile Info  -->
+              <div class="info-card mt-[10px] md:mt-[30px]">
+                <div class="rounded-[20px] bg-card px-[30px] py-[40px]">
+                  <div>
+                    <div class="mt-[25px]">
+                      <div class="text-center">
+                        <h3
+                          class="wow fadeIn animated text-[24px] font-semibold text-white wow animated fadeInUp"
+                          data-wow-duration="1.5s"
+                          data-wow-delay="0.4s"
+                        >
+                          Hy! I’m
+                          <span class="text-theme"> AMIT!</span>
+                        </h3>
+                        <p
+                          class="mt-[6px] text-text wow animated fadeInUp"
+                          data-wow-duration="1.5s"
+                          data-wow-delay="0.45s"
+                        >
+                          Software Developer
+                        </p>
+                        <div
+                          class="mt-[26px] flex justify-center wow animated fadeInUp"
+                          data-wow-duration="1.5s"
+                          data-wow-delay="0.5s"
+                        >
+                          <img
+                            src="assets/images/profile/user.png"
+                            alt="Lariv portfolio web template"
+                            class="w-full rounded-2xl object-cover"
+                          />
+                        </div>
+                        <div class="mt-[26px]" wow animated fadeInUp"
+                        data-wow-duration="1.5s" data-wow-delay="0.52s" >
+                        <p
+                          class="text-[20px] text-text wow animated fadeInUp"
+                          data-wow-duration="1.5s"
+                          data-wow-delay="0.54s"
+                        >
+                          admin@demo.com
+                        </p>
+                        <p
+                          class="mt-[10px] text-text wow animated fadeInUp"
+                          data-wow-duration="1.5s"
+                          data-wow-delay="0.56s"
+                        >
+                          4688 Hickman Street <br />
+                          Chicago, IL 60605
+                        </p>
+                      </div>
+                      <div
+                        class="mt-[30px] flex justify-center gap-3 wow animated fadeInUp"
+                        data-wow-duration="1.5s"
+                        data-wow-delay="0.3s"
+                      >
+                        <a href="#" class="block">
+                          <i class="fa-brands fa-facebook-f socialRound"></i>
+                        </a>
+                        <a href="#" class="block">
+                          <i class="fa-brands fa-twitter socialRound"></i>
+                        </a>
+                        <a href="#" class="block">
+                          <i class="fa-brands fa-linkedin-in socialRound"></i>
+                        </a>
+                        <a href="#" class="block">
+                          <i class="fa-brands fa-github socialRound"></i>
+                        </a>
+                      </div>
+                      <div
+                        class="mt-[30px] wow animated fadeInUp"
+                        data-wow-duration="1.5s"
+                        data-wow-delay="0.4s"
+                      >
+                        <a
+                          href="assets/pdf/Resume-of-Amit-Biswas-MERN.pdf"
+                          class="block rounded-full border-2 border-theme bg-theme py-[10px] font-medium text-white transition-all duration-300 hover:bg-transparent"
+                        >
+                          Download CV
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-8">
+            <div class="mt-[80px]">
+              <h2
+                class="text-[32px] font-semibold uppercase leading-tight text-white md:text-[52px] wow animated fadeInUp"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.3s"
+              >
+                I can develop that
+                <br class="hidden md:block" />
+                help
+                <span class="text-theme"> people!</span>
+              </h2>
+              <p
+                class="mt-[20px] text-text wow animated fadeInUp"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.4s"
+              >
+                Since starting my excursion as an independent creator almost
+                quite a while back, I've accomplished remote work for
+                organizations, counseled for new companies, and teamed up with
+                capable individuals to make computerized items for both business
+                and purchaser use. I'm discreetly sure, normally inquisitive,
+                and ceaselessly dealing with further developing my chops each
+                plan issue in turn.
+              </p>
+            </div>
+
+            <!-- Personal Information  -->
+            <div class="mt-[60px]">
+              <h2
+                class="text-[32px] font-semibold wow animated fadeInUp"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.5s"
+              >
+                Personal Info:
+              </h2>
+              <div class="mt-[20px] grid grid-cols-12">
+                <div
+                  class="col-span-6 wow animated fadeInUp"
+                  data-wow-duration="1.5s"
+                  data-wow-delay="0.5s"
+                >
+                  <p class="text-[18px] font-medium">Name</p>
+                  <p class="mt-2 text-[16px] text-text">Amit Biswas</p>
+                </div>
+                <div
+                  class="col-span-6 wow animated fadeInUp"
+                  data-wow-duration="1.5s"
+                  data-wow-delay="0.5s"
+                >
+                  <p class="text-[18px] font-medium">Birthday</p>
+                  <p class="mt-2 text-[16px] text-text">22 Dec, 1994</p>
+                </div>
+              </div>
+              <div class="mt-[20px] grid grid-cols-12">
+                <div
+                  class="col-span-6 wow animated fadeInUp"
+                  data-wow-duration="1.5s"
+                  data-wow-delay="0.3s"
+                >
+                  <p class="text-[18px] font-medium">Email</p>
+                  <p class="mt-2 text-[16px] text-text">contact@amitjs.com</p>
+                </div>
+                <div
+                  class="col-span-6 wow animated fadeInUp"
+                  data-wow-duration="1.5s"
+                  data-wow-delay="0.4s"
+                >
+                  <p class="text-[18px] font-medium">Skype</p>
+                  <p class="mt-2 text-[16px] text-text">amitjs963</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Working Experience Information  -->
+            <div class="mt-[60px]">
+              <h2
+                class="text-[32px] font-semibold wow animated fadeInUp"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.2s"
+              >
+                Working <span class="text-theme">Experience:</span>
+              </h2>
+              <div class="items mt-[40px] grid gap-[40px]">
+                <div
+                  class="item relative grid gap-[40px] border-l-[2px] border-theme pb-[16px] pl-[35px]"
+                >
+                  <i
+                    class="fa-solid fa-fire-flame-curved absolute left-[-13px] top-[-25px] text-[30px] text-theme"
+                  ></i>
+
+                  <div>
+                    <p
+                      class="text-text wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.25s"
+                    >
+                      2021 - Present
+                    </p>
+                    <h3
+                      class="mt-[10px] text-[20px] font-medium text-white md:text-[25px] wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.3s"
+                    >
+                      Framer Designer & Developer
+                    </h3>
+                    <p
+                      class="mt-[5px] text-[18px] font-medium text-text wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.35s"
+                    >
+                      Liza Yoolo ITC Company
+                    </p>
+                    <p
+                      class="mt-[15px] text-text wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.4s"
+                    >
+                      Since starting my excursion as an independent creator
+                      almost quite a while back, I've accomplished remote work
+                      for organizations, counseled for new companies, and teamed
+                      up with capable individuals to make computerized items for
+                      both business and purchaser use.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p
+                      class="text-text wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.3s"
+                    >
+                      2016 - 2020
+                    </p>
+                    <h3
+                      class="mt-[10px] text-[20px] font-medium text-white md:text-[25px] wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.35s"
+                    >
+                      Web Application Manager
+                    </h3>
+                    <p
+                      class="mt-[5px] text-[18px] font-medium text-text wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.4s"
+                    >
+                      Ultra Luca Company
+                    </p>
+                    <p
+                      class="mt-[15px] text-text wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.4.5s"
+                    >
+                      Since starting my excursion as an independent creator
+                      almost quite a while back, I've accomplished remote work
+                      for organizations, counseled for new companies, and teamed
+                      up with capable individuals to make computerized items for
+                      both business and purchaser use.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education Information  -->
+            <div class="mt-[60px]">
+              <h2
+                class="text-[32px] font-semibold wow animated fadeInUp"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.2s"
+              >
+                Educational <span class="text-theme">Qualifications:</span>
+              </h2>
+              <div class="items mt-[40px] grid gap-[40px]">
+                <div
+                  class="item relative grid gap-[40px] border-l-[2px] border-theme pb-[16px] pl-[35px]"
+                >
+                  <i
+                    class="fa-solid fa-fire-flame-curved absolute left-[-13px] top-[-25px] text-[30px] text-theme"
+                  ></i>
+
+                  <div>
+                    <p
+                      class="text-text wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.2.5s"
+                    >
+                      2021 - Present
+                    </p>
+                    <h3
+                      class="mt-[10px] text-[20px] font-medium text-white md:text-[25px] wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.3s"
+                    >
+                      MBA
+                    </h3>
+                    <p
+                      class="mt-[5px] text-[18px] font-medium text-text wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.35s"
+                    >
+                      University of Dhaka
+                    </p>
+                    <p
+                      class="mt-[15px] text-text wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.4s"
+                    >
+                      Since starting my excursion as an independent creator
+                      almost quite a while back, I've accomplished remote work
+                      for organizations, counseled for new companies, and teamed
+                      up with capable individuals to make computerized items for
+                      both business and purchaser use.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p
+                      class="text-text wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.2s"
+                    >
+                      2016 - 2020
+                    </p>
+                    <h3
+                      class="mt-[10px] text-[20px] font-medium text-white md:text-[25px] wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.25s"
+                    >
+                      BBA
+                    </h3>
+                    <p
+                      class="mt-[5px] text-[18px] font-medium text-text wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.3s"
+                    >
+                      University of Dhaka
+                    </p>
+                    <p
+                      class="mt-[15px] text-text wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.35s"
+                    >
+                      Since starting my excursion as an independent creator
+                      almost quite a while back, I've accomplished remote work
+                      for organizations, counseled for new companies, and teamed
+                      up with capable individuals to make computerized items for
+                      both business and purchaser use.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skill Information  -->
+            <div class="mt-[60px]">
+              <h2
+                class="text-[32px] font-semibold wow animated fadeInUp"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.2s"
+              >
+                My <span class="text-theme">Advantages:</span>
+              </h2>
+              <div class="items mt-[40px] grid gap-[40px]">
+                <div
+                  class="item relative grid gap-[40px] border-l-[2px] border-theme pb-[16px] pl-[35px]"
+                >
+                  <i
+                    class="fa-solid fa-fire-flame-curved absolute left-[-13px] top-[-25px] text-[30px] text-theme"
+                  ></i>
+
+                  <div>
+                    <p
+                      class="text-text wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.25s"
+                    >
+                      2016 - 2020
+                    </p>
+                    <h3
+                      class="mt-[10px] text-[20px] font-medium text-white md:text-[25px] wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.3s"
+                    >
+                      Figma
+                    </h3>
+                    <p
+                      class="mt-[5px] text-[18px] font-medium text-text wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.35s"
+                    >
+                      UI/UX Design
+                    </p>
+                    <div class="mt-[20px] w-full">
+                      <div
+                        class="mb-2 flex items-center justify-between gap-4 wow animated fadeInUp"
+                        data-wow-duration="1.5s"
+                        data-wow-delay="0.4s"
+                      >
+                        <p class="text-[16px] font-medium text-white">Figma</p>
+                        <h6 class="text-white">85%</h6>
+                      </div>
+                      <div
+                        class="border border-theme/20 bg-theme/10 py-[8px] px-1 flex items-center h-[12px] w-full overflow-hidden font-sans text-xs font-medium rounded-full wow animated fadeInUp"
+                        data-wow-duration="1.5s"
+                        data-wow-delay="0.45s"
+                      >
+                        <div
+                          class="h-[6px] justify-center overflow-hidden rounded-full bg-theme wow"
+                          style="width: 85%"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p
+                      class="text-text wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.2s"
+                    >
+                      2016 - 2020
+                    </p>
+                    <h3
+                      class="mt-[10px] text-[20px] font-medium text-white md:text-[25px] wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.25s"
+                    >
+                      NEXT Prisma Application
+                    </h3>
+                    <p
+                      class="mt-[5px] text-[18px] font-medium text-text wow animated fadeInUp"
+                      data-wow-duration="1.5s"
+                      data-wow-delay="0.3s"
+                    >
+                      Web Application Developer
+                    </p>
+                    <div class="mt-[20px] w-full">
+                      <div
+                        class="mb-2 flex items-center justify-between gap-4 wow animated fadeInUp"
+                        data-wow-duration="1.5s"
+                        data-wow-delay="0.35s"
+                      >
+                        <p class="text-[16px] font-medium text-white">
+                          NEXT-JS
+                        </p>
+                        <h6 class="text-white">95%</h6>
+                      </div>
+                      <div
+                        class="border border-theme/20 bg-theme/10 py-[8px] px-1 flex items-center h-[12px] w-full overflow-hidden font-sans text-xs font-medium rounded-full wow animated fadeInUp"
+                        data-wow-duration="1.5s"
+                        data-wow-delay="0.4s"
+                      >
+                        <div
+                          class="h-[6px] justify-center overflow-hidden rounded-full bg-theme wow"
+                          style="width: 95%"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer start -->
+    <footer class="relative z-[9]">
+      <div class="container mx-auto flex justify-center pb-[40px]">
+        <div>
+          <p class="text-center text-text">
+            Copyright <span class="text-theme">Lariv</span> ©2023. All rights
+            reserved
+          </p>
+          <div class="mt-[20px] flex justify-center text-center">
+            <img
+              src="assets/images/logo.svg"
+              alt="Lariv - React Portfolio Template"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- JS here -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/waypoints.js"></script>
+    <script src="assets/js/backtotop.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/typer.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

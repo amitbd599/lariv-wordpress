@@ -151,7 +151,7 @@ function _header_top_fields( $fields ) {
     $fields[] = [
         'type'     => 'switch',
         'settings' => 'lariv_topbar_switch',
-        'label'    => esc_html__( 'Topbar Swicher', 'lariv' ),
+        'label'    => esc_html__( 'Topbar Swicher info', 'lariv' ),
         'section'  => 'header_top_setting',
         'default'  => '0',
         'priority' => 10,

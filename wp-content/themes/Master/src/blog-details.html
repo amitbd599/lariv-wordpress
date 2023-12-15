@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Home || Lariv - HTML Portfolio Web Template</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Place favicon.ico in the root directory -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/favicon.ico"
+    />
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> href improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Preloader Start-->
+
+    <div class="InitLoader">
+      <div class="fingerprint-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+      </div>
+    </div>
+
+    <!-- back href top start  -->
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <!-- back href top end -->
+
+    <!-- Bg image start-->
+    <div
+      class="bg-img"
+      style="background-image: url('assets/images/show/bg.png')"
+    ></div>
+    <!-- Bg image end-->
+
+    <!-- header-area-start -->
+    <header class="relative z-[99]">
+      <div class="container mx-auto pt-[30px]">
+        <div
+          class="flex justify-between rounded-[10px] bg-card px-[15px] py-[30px] md:px-[30px]"
+        >
+          <div class="logo flex items-center">
+            <a href="index.html">
+              <img
+                src="assets/images/logo.svg"
+                alt="Lariv - React Portfolio Template"
+              />
+            </a>
+          </div>
+          <div class="hidden items-center lg:flex">
+            <ul class="flex gap-[40px]">
+              <li>
+                <a href="index.html" class="navNotActive">Home</a>
+              </li>
+              <li>
+                <a href="about.html" class="navNotActive">About Us</a>
+              </li>
+              <li>
+                <a href="portfolio.html" class="navNotActive">Portfolio</a>
+              </li>
+              <li>
+                <a href="service.html" class="navNotActive">Service</a>
+              </li>
+              <li>
+                <a href="blog.html" class="navActive">Blog</a>
+              </li>
+              <li>
+                <a href="contact.html" class="navNotActive">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="block lg:hidden">
+            <div class="flex items-center gap-4 px-[10px]">
+              <span
+                class="sidebar-open rounded-full border border-[#919295] flex justify-center items-center w-[50px] h-[50px]"
+              >
+                <i class="fa-light fa-bars-sort text-text text-[22px]"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header-area-end -->
+
+    <!-- side bar start -->
+    <div
+      class="sidebar fixed left-[100%] top-0 z-[999] h-full w-full bg-btn/60 transition-all duration-500"
+    >
+      <div
+        class="ml-auto h-full min-h-[750px] w-[300px] bg-card px-[30px] pt-[60px] md:min-h-[700px]"
+      >
+        <div class="relative flex justify-center">
+          <span
+            class="sidebar-close group absolute left-[-78px] rounded-lg bg-card px-[15px] py-[10px] text-[26px]"
+          >
+            <i
+              class="fa-regular fa-xmark text-white transition-all duration-500 group-hover:rotate-90 group-hover:text-theme"
+            ></i>
+          </span>
+          <div>
+            <img
+              src="assets/images/logo.svg"
+              alt="Lariv - React Portfolio Template"
+            />
+          </div>
+        </div>
+        <div class="my-[30px] border-t border-[#ddd]"></div>
+        <nav class="mt-[30px]">
+          <ul class="grid gap-[24px]">
+            <li class="text-[18px] font-semibold">
+              <a href="index.html" class="navNotActive">Home</a>
+            </li>
+            <li class="text-[18px] font-semibold">
+              <a href="about.html" class="navNotActive">About Us</a>
+            </li>
+            <li class="text-[18px] font-semibold">
+              <a href="portfolio.html" class="navNotActive">Portfolio</a>
+            </li>
+            <li class="text-[18px] font-semibold">
+              <a href="service.html" class="navNotActive">Service</a>
+            </li>
+            <li class="text-[18px] font-semibold">
+              <a href="blog.html" class="navNotActive">Blog</a>
+            </li>
+            <li class="text-[18px] font-semibold">
+              <a href="contact.html" class="navNotActive">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="my-[30px] border-t border-[#ddd]"></div>
+
+        <div class="contact mt-[40px] pb-[20px] md:mt-[0px]">
+          <div>
+            <p class="text-[20px] font-semibold text-white">Follow Me:</p>
+
+            <div class="mt-[20px] flex gap-3">
+              <a href="#">
+                <button
+                  class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
+                >
+                  <i class="fa-brands fa-facebook-f text-[22px]"></i>
+                </button>
+              </a>
+              <a href="#">
+                <button
+                  class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
+                >
+                  <i class="fa-brands fa-twitter text-[22px]"></i>
+                </button>
+              </a>
+              <a href="#">
+                <button
+                  class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
+                >
+                  <i class="fa-brands fa-linkedin-in text-[22px]"></i>
+                </button>
+              </a>
+              <a href="#">
+                <button
+                  class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
+                >
+                  <i class="fa-brands fa-instagram text-[22px]"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- side bar end -->
+
+    <main>
+      <section class="py-[30px] md:py-[80px]">
+        <div class="container">
+          <div
+            class="menuBox wow animated fadeInUp"
+            data-wow-duration="1.5s"
+            data-wow-delay="0.3s"
+          >
+            <div
+              class="inline-block rounded-full border border-text px-[20px] py-[5px]"
+            >
+              <div class="flex items-center gap-[6px]">
+                <span>
+                  <i class="fa-regular fa-blog text-[14px] text-white"></i>
+                </span>
+                <span class="pl-[6px] text-[14px] text-white">
+                  Blog Details
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-[60px]">
+            <div>
+              <div
+                class="w-full overflow-hidden lg:h-[720px] wow animated fadeInUp"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.4s"
+              >
+                <img
+                  src="assets/images/blog/blog-feature.png"
+                  alt="Lariv - React Portfolio Template"
+                  class="h-full w-full rounded-lg object-cover"
+                />
+              </div>
+              <div
+                class="title mt-[40px] wow animated fadeInUp"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.5s"
+              >
+                <h2
+                  class="text-[26px] font-semibold capitalize leading-[36px] text-white md:text-[32px] md:leading-[42px]"
+                >
+                  Open-source software to speed up quantum research
+                </h2>
+              </div>
+              <div
+                class="mt-[20px] flex items-center gap-[20px] wow animated fadeInUp"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.3s"
+              >
+                <div class="flex items-center gap-[10px]">
+                  <span>
+                    <i class="fa-regular fa-clock text-base text-theme"></i>
+                  </span>
+                  <span class="text-sm text-text">November 22, 2023</span>
+                </div>
+                <div class="flex items-center gap-[10px]">
+                  <span>
+                    <i class="fa-regular fa-comment text-base text-theme"></i>
+                  </span>
+                  <span class="text-sm text-text">2 Comments</span>
+                </div>
+              </div>
+              <div
+                class="mt-[30px] wow animated fadeInUp"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.3s"
+              >
+                <p class="text-text">
+                  Quantum technology is expected to fundamentally change many
+                  key areas of society. Researchers are convinced that there are
+                  many more useful quantum properties and applications to
+                  explore than those we know today. A team of researchers at
+                  Chalmers University of Technology in Sweden have now developed
+                  open-source, freely available software that will pave the way
+                  for new discoveries in the field and accelerate quantum
+                  research significantly.
+                </p>
+                <p class="mt-[30px] text-text">
+                  Within a few decades, quantum technology is expected to become
+                  a key technology in areas such as health, communication,
+                  defence and energy. The power and potential of the technology
+                  lie in the odd and very special properties of quantum
+                  particles. Of particular interest to researchers in the field
+                  are the superconducting properties of quantum particles that
+                  give components perfect conductivity with unique magnetic
+                  properties. These superconducting properties are considered
+                  conventional today and have already paved the way for entirely
+                  new technologies used in applications such as magnetic
+                  resonance imaging equipment, maglev trains and quantum
+                  computer components. However, years of research and
+                  development remain before a quantum computer can be expected
+                  to solve real computing problems in practice, for example. The
+                  research community is convinced that there are many more
+                  revolutionary discoveries to be made in quantum technology
+                  than those we know today.
+                </p>
+                <div class="mt-[30px] rounded-xl bg-btn p-[30px]">
+                  <div class="gap-[20px] md:flex">
+                    <div class="w-[50px] md:w-[120px]">
+                      <i
+                        class="fa-solid fa-quote-left text-[100px] text-theme"
+                      ></i>
+                    </div>
+                    <p class="text-[16px] text-white">
+                      Quantum technology is expected to fundamentally change
+                      many key areas of society. Researchers are convinced that
+                      there are many more useful quantum properties and
+                      applications to explore than those we know today. many key
+                      areas of society. Researchers are convinced that there are
+                      many more useful quantum properties and applications to
+                      explore than those we know today.
+                    </p>
+                  </div>
+                </div>
+                <p class="mt-[30px] text-text">
+                  hese new superconductors continue to be highly enigmatic
+                  materials -- just as their conventional siblings once were
+                  when they were discovered in a laboratory more than a hundred
+                  years ago. After that discovery, it would be more than 40
+                  years before researchers could describe them in theory.many
+                  more useful quantum properties and applications to explore
+                  than those we know today. many key areas of society.
+                  Researchers are convinced that there are many more useful
+                  quantum properties and applications to explore than those we
+                  know today.
+                </p>
+                <div class="w-100 mt-[30px] gap-[30px] lg:flex">
+                  <div class="h-auto w-full overflow-hidden lg:w-6/12">
+                    <img
+                      src="assets/images/blog/blog-2.png"
+                      alt="Lariv - React Portfolio Template"
+                      class="h-full w-full rounded-xl object-cover"
+                    />
+                  </div>
+                  <div class="mt-[30px] lg:mt-0 lg:w-6/12">
+                    <p class="text-text">
+                      Vuexy React The most developer-friendly &amp; highly
+                      customizable React Admin Template. It is based on Create
+                      React App, Redux &amp; Reactstrap BS4. Furthermore, this
+                      template. customizable React Admin Template. It is based
+                      on Create React App, Redux &amp; Template. It is based on
+                      Create React App, Redux &amp; Reactstrap BS4. Furthermore,
+                      this template. customizable React Admin Template. It is
+                      based on Create React App, Redux &amp; Reactstrap BS4.
+                      Furthermore, this template.
+                    </p>
+                    <ul class="mt-[20px] grid gap-5">
+                      <li class="flex items-center gap-2 text-text">
+                        <i class="fa-solid fa-circle-check text-theme"></i>
+                        User account creation with email login options.
+                      </li>
+                      <li class="flex items-center gap-2 text-text">
+                        <i class="fa-solid fa-circle-check text-theme"></i>
+                        Password reset and account recovery options.
+                      </li>
+                      <li class="flex items-center gap-2 text-text">
+                        <i class="fa-solid fa-circle-check text-theme"></i>
+                        Advanced search functionality to find specific cuisines,
+                        dishes, or restaurants
+                      </li>
+                      <li class="flex items-center gap-2 text-text">
+                        <i class="fa-solid fa-circle-check text-theme"></i>
+                        User account creation with email login options.
+                      </li>
+                      <li class="flex items-center gap-2 text-text">
+                        <i class="fa-solid fa-circle-check text-theme"></i>
+                        Password reset and account recovery options.
+                      </li>
+                      <li class="flex items-center gap-2 text-text">
+                        <i class="fa-solid fa-circle-check text-theme"></i>
+                        Advanced search functionality to find specific cuisines,
+                        dishes, or restaurants
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="mt-[30px] text-text">
+                  Hese new superconductors continue to be highly enigmatic
+                  materials -- just as their conventional siblings once were
+                  when they were discovered in a laboratory more than a hundred
+                  years ago. After that discovery, it would be more than 40
+                  years before researchers could describe them in theory.
+                  materials -- just as their conventional siblings once were
+                  when they were discovered in a laboratory more than a hundred
+                  years ago. After that discovery, it would be more than 40
+                  years before researchers could describe them in theory.
+                </p>
+                <div class="mt-[30px] grid gap-[30px] md:flex">
+                  <div>
+                    <img
+                      src="assets/images/blog/blog-4.png"
+                      alt="Lariv - React Portfolio Template"
+                      class="w-full rounded-xl"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="assets/images/blog/blog-5.png"
+                      alt="Lariv - React Portfolio Template"
+                      class="w-full rounded-xl"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="assets/images/blog/blog-6.png"
+                      alt="Lariv - React Portfolio Template"
+                      class="w-full rounded-xl"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="assets/images/blog/blog-7.png"
+                      alt="Lariv - React Portfolio Template"
+                      class="w-full rounded-xl"
+                    />
+                  </div>
+                </div>
+                <p class="mt-[30px] text-text">
+                  To be able to explore revolutionary new discoveries, tools are
+                  needed that can study and utilise the extraordinary quantum
+                  properties at the minimal particle level, and can also be
+                  scaled up large enough to be used in practice. Researchers
+                  need to work at meso scopic scale. To be able to explore
+                  revolutionary new discoveries, tools are needed that can study
+                  and utilise the extraordinary quantum properties at the
+                  minimal particle level, and can also be scaled up large enough
+                  to be used in practice. Researchers need to work at meso
+                  scopic scale.
+                </p>
+              </div>
+              <div class="mt-[30px]">
+                <div class="grid items-center justify-between md:flex">
+                  <div
+                    class="wow animated fadeInUp"
+                    data-wow-duration="1.5s"
+                    data-wow-delay="0.3s"
+                  >
+                    <p class="text-[18px] font-semibold text-white">
+                      By Alex Johan
+                    </p>
+                  </div>
+                  <div
+                    class="mt-[20px] md:mt-0 wow animated fadeInUp"
+                    data-wow-duration="1.5s"
+                    data-wow-delay="0.3s"
+                  >
+                    <div class="mt-[30px] flex justify-center gap-3">
+                      <a href="#">
+                        <button
+                          class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
+                        >
+                          <i class="fa-brands fa-facebook-f text-[22px]"></i>
+                        </button>
+                      </a>
+                      <a href="#">
+                        <button
+                          class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
+                        >
+                          <i class="fa-brands fa-twitter text-[22px]"></i>
+                        </button>
+                      </a>
+                      <a href="#">
+                        <button
+                          class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
+                        >
+                          <i class="fa-brands fa-linkedin-in text-[22px]"></i>
+                        </button>
+                      </a>
+                      <a href="#">
+                        <button
+                          class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
+                        >
+                          <i class="fa-brands fa-instagram text-[22px]"></i>
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-[30px] md:mt-[10px]">
+                <div data-aos="fade-up" data-aos-delay="100">
+                  <h2 class="text-[22px] font-semibold text-white">
+                    03 Comments
+                  </h2>
+                </div>
+                <div class="my-[15px] border-t border-[#ddd]" />
+                <div class="parent mt-[40px] grid gap-[30px]">
+                  <div
+                    class="flex w-full gap-[30px]"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <div class="w-[20%] md:w-auto">
+                      <img
+                        src="assets/images/user/user-1.png"
+                        alt="Lariv - React Portfolio Template"
+                        class="w-[120px] rounded-full"
+                      />
+                    </div>
+                    <div class="w-[80%] md:w-auto">
+                      <div class="flex w-full justify-between">
+                        <div class="flex w-full justify-between">
+                          <h2 class="text-[18px] font-medium text-white">
+                            Jose K. King
+                          </h2>
+                          <button class="btn px-[20px] py-[6px]">Reply</button>
+                        </div>
+                      </div>
+                      <div class="mt-[10px]">
+                        <p class="text-text">
+                          We want to find out about all the other exciting
+                          properties of unconventional superconductors. Our
+                          software is powerful, educational and user-friendly,
+                          and we hope that it will help generate new
+                          understanding and suggest entirely new applications
+                          for these unexplored superconductors
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="flex w-full gap-[30px]"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <div class="w-[20%] md:w-auto">
+                      <img
+                        src="assets/images/user/user-2.png"
+                        alt="Lariv - React Portfolio Template"
+                        class="w-[120px] rounded-full"
+                      />
+                    </div>
+                    <div class="w-[80%] md:w-auto">
+                      <div class="flex w-full justify-between">
+                        <div class="flex w-full justify-between">
+                          <h2 class="text-[18px] font-medium text-white">
+                            Rock Sendro
+                          </h2>
+                          <button class="btn px-[20px] py-[6px]">Reply</button>
+                        </div>
+                      </div>
+                      <div class="mt-[10px]">
+                        <p class="text-text">
+                          We want to find out about all the other exciting
+                          properties of unconventional superconductors. Our
+                          software is powerful, educational and user-friendly,
+                          and we hope that it will help generate new
+                          understanding and suggest entirely new applications
+                          for these unexplored superconductors
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-[60px]">
+                  <div data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="text-[22px] font-semibold text-white">
+                      Post a Comment
+                    </h2>
+                    <p class="mt-[2px] text-text">
+                      Your email address will not be published. Required fields
+                      are marked *
+                    </p>
+                    <div class="mt-[20px]">
+                      <div class="grid w-full gap-[20px] md:flex">
+                        <div class="md:w-1/2">
+                          <input
+                            class="block w-full rounded-lg border bg-transparent px-[15px] py-[10px] text-white focus:outline-none"
+                            type="text"
+                            placeholder="Full Name:"
+                          />
+                        </div>
+                        <div class="md:w-1/2">
+                          <input
+                            class="block w-full rounded-lg border bg-transparent px-[15px] py-[10px] text-white focus:outline-none"
+                            type="text"
+                            placeholder="Your Email:"
+                          />
+                        </div>
+                      </div>
+                      <div class="mt-[20px]">
+                        <textarea
+                          placeholder="Write your Comment here:"
+                          name=""
+                          cols="30"
+                          rows="10"
+                          class="block w-full rounded-lg border bg-transparent px-[15px] py-[10px] text-white focus:outline-none"
+                          defaultValue=""
+                        ></textarea>
+                      </div>
+                      <div>
+                        <div class="mb-6 mt-[20px] flex items-start">
+                          <div class="flex h-5 items-center">
+                            <input
+                              id="remember"
+                              aria-describedby="remember"
+                              type="checkbox"
+                              class="h-4 w-4 rounded bg-btn"
+                            />
+                          </div>
+                          <div class="ml-3 text-sm">
+                            <label for="remember" class="font-medium text-text">
+                              Save my name, email, and website in this browser
+                              for the next time I comment.
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-[30px]">
+                        <button class="btn">Post Comment</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer start -->
+    <footer class="relative z-[9]">
+      <div class="container mx-auto flex justify-center pb-[40px]">
+        <div>
+          <p class="text-center text-text">
+            Copyright <span class="text-theme">Lariv</span> ©2023. All rights
+            reserved
+          </p>
+          <div class="mt-[20px] flex justify-center text-center">
+            <img
+              src="assets/images/logo.svg"
+              alt="Lariv - React Portfolio Template"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- JS here -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/waypoints.js"></script>
+    <script src="assets/js/backtotop.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/typer.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

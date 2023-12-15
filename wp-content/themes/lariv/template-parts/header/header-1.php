@@ -28,8 +28,145 @@
 
 ?>
 
+    <!-- header-area-start -->
+    <header class="relative z-[99]">
+      <div class="container mx-auto pt-[30px]">
+        <div
+          class="flex justify-between rounded-[10px] bg-card px-[15px] py-[30px] md:px-[30px]"
+        >
+          <div class="logo flex items-center">
+            <a href="index.html">
+              <img
+                src="assets/images/logo.svg"
+                alt="Lariv - React Portfolio Template"
+              />
+            </a>
+          </div>
+          <div class="hidden items-center lg:flex">
+            <ul class="flex gap-[40px]">
+              <li>
+                <a href="index.html" class="navActive">Home</a>
+              </li>
+              <li>
+                <a href="about.html" class="navNotActive">About Us</a>
+              </li>
+              <li>
+                <a href="portfolio.html" class="navNotActive">Portfolio</a>
+              </li>
+              <li>
+                <a href="service.html" class="navNotActive">Service</a>
+              </li>
+              <li>
+                <a href="blog.html" class="navNotActive">Blog</a>
+              </li>
+              <li>
+                <a href="contact.html" class="navNotActive">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="block lg:hidden">
+            <div class="flex items-center gap-4 px-[10px]">
+              <span
+                class="sidebar-open rounded-full border border-[#919295] flex justify-center items-center w-[50px] h-[50px]"
+              >
+                <i class="fa-light fa-bars-sort text-text text-[22px]"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header-area-end -->
+
+    <!-- side bar start -->
+    <div
+      class="sidebar fixed left-[100%] top-0 z-[999] h-full w-full bg-btn/60 transition-all duration-500"
+    >
+      <div
+        class="ml-auto h-full min-h-[750px] w-[300px] bg-card px-[30px] pt-[60px] md:min-h-[700px]"
+      >
+        <div class="relative flex justify-center">
+          <span
+            class="sidebar-close group absolute left-[-78px] rounded-lg bg-card px-[15px] py-[10px] text-[26px]"
+          >
+            <i
+              class="fa-regular fa-xmark text-white transition-all duration-500 group-hover:rotate-90 group-hover:text-theme"
+            ></i>
+          </span>
+          <div>
+            <img
+              src="assets/images/logo.svg"
+              alt="Lariv - React Portfolio Template"
+            />
+          </div>
+        </div>
+        <div class="my-[30px] border-t border-[#ddd]"></div>
+        <nav class="mt-[30px]">
+          <ul class="grid gap-[24px]">
+            <li class="text-[18px] font-semibold">
+              <a href="index.html" class="navActive">Home</a>
+            </li>
+            <li class="text-[18px] font-semibold">
+              <a href="about.html" class="navNotActive">About Us</a>
+            </li>
+            <li class="text-[18px] font-semibold">
+              <a href="portfolio.html" class="navNotActive">Portfolio</a>
+            </li>
+            <li class="text-[18px] font-semibold">
+              <a href="service.html" class="navNotActive">Service</a>
+            </li>
+            <li class="text-[18px] font-semibold">
+              <a href="blog.html" class="navNotActive">Blog</a>
+            </li>
+            <li class="text-[18px] font-semibold">
+              <a href="contact.html" class="navNotActive">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="my-[30px] border-t border-[#ddd]"></div>
+
+        <div class="contact mt-[40px] pb-[20px] md:mt-[0px]">
+          <div>
+            <p class="text-[20px] font-semibold text-white">Follow Me:</p>
+
+            <div class="mt-[20px] flex gap-3">
+              <a href="#">
+                <button
+                  class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
+                >
+                  <i class="fa-brands fa-facebook-f text-[22px]"></i>
+                </button>
+              </a>
+              <a href="#">
+                <button
+                  class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
+                >
+                  <i class="fa-brands fa-twitter text-[22px]"></i>
+                </button>
+              </a>
+              <a href="#">
+                <button
+                  class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
+                >
+                  <i class="fa-brands fa-linkedin-in text-[22px]"></i>
+                </button>
+              </a>
+              <a href="#">
+                <button
+                  class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
+                >
+                  <i class="fa-brands fa-instagram text-[22px]"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- side bar end -->
+
 <!-- header area start -->
-<header>
+<header class="hidden">
  <div class="header__area">
  	<?php if ( !empty( $lariv_topbar_switch ) ): ?>
     <div class="header__top header__border d-none d-md-block">

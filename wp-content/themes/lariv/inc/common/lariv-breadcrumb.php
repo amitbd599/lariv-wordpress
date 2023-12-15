@@ -94,9 +94,17 @@ function lariv_breadcrumb_func() {
             $bg_img = !empty( $bg_img_from_page ) ? $bg_img_from_page['url'] : $bg_img;
         }?>
 
+
+    <!-- Bg image start-->
+    <div
+      class="bg-img"
+      style="background-image: url('assets/images/show/bg.png')"
+    ></div>
+    <!-- Bg image end-->
+
          <!-- page title area start -->
         <?php if(!empty($breadcrumb_switch)) : ?>
-         <section class="breadcrumb__area include-bg pt-150 pb-150 breadcrumb__overlay <?php print esc_attr( $breadcrumb_class );?>" data-background="<?php print esc_attr($bg_img);?>">
+         <section class="hidden breadcrumb__area include-bg pt-150 pb-150 breadcrumb__overlay <?php print esc_attr( $breadcrumb_class );?>" data-background="<?php print esc_attr($bg_img);?>">
             <div class="container">
                <div class="row">
                	<?php if (!empty($breadcrumb_info_switch)) : ?>
