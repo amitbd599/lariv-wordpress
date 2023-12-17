@@ -36,29 +36,38 @@
 
     ?>
 
-    <?php if ( !empty( $lariv_preloader ) ): ?>
-    <!-- pre loader area start -->
-    <div id="loading">
-     <div id="loading-center">
-        <div id="loading-center-absolute">
-           <svg id="loader">
-              <path id="corners" d="m 0 12.5 l 0 -12.5 l 50 0 l 0 50 l -50 0 l 0 -37.5" />
-           </svg>
-           <img src="<?php echo esc_url($preloader_logo); ?>" alt="<?php echo esc_attr__('logo','lariv'); ?>">
-        </div>
-     </div>  
+        <!-- Preloader Start-->
+<?php if ( !empty( $lariv_preloader ) ): ?>
+<div class="InitLoader">
+      <div class="fingerprint-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+      </div>
     </div>
-    <!-- pre loader area end -->
-    <?php endif;?>
+  <?php endif; ?>
 
-    <?php if ( !empty( $lariv_backtotops ) ): ?>
-    <!-- back to top start -->
-    <div class="progress-wrap">
-     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-     </svg>
+
+
+    <?php if ( !empty( $lariv_backtotop ) ): ?>
+      <!-- back href top start  -->
+      <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+      </svg>
     </div>
-    <!-- back to top end -->
+    <!-- back href top end -->
     <?php endif;?>
 
     

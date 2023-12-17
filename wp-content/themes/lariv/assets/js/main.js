@@ -27,6 +27,23 @@
 
   var windowOn = $(window);
 
+  // 02. Mobile Menu Js
+  $("#mobile-menu").meanmenu({
+    meanMenuContainer: ".mobile-menu",
+    meanScreenWidth: "991",
+    meanExpand: ['<i class="fal fa-plus"></i>'],
+  });
+
+  // 03. Sidebar Js
+  $(".sidebar-toggle-btn").on("click", function () {
+    $(".sidebar__area").addClass("sidebar-opened");
+    $(".body-overlay").addClass("opened");
+  });
+  $(".sidebar__close-btn").on("click", function () {
+    $(".sidebar__area").removeClass("sidebar-opened");
+    $(".body-overlay").removeClass("opened");
+  });
+
   //! 04. Counter Js
   $(".counter").counterUp({
     delay: 10,

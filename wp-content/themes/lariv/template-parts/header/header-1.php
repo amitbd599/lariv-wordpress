@@ -9,66 +9,46 @@
 	*/
 
 	// info
-    $lariv_topbar_switch = get_theme_mod( 'lariv_topbar_switch', false );
-    $lariv_mail_id = get_theme_mod( 'lariv_mail_id', __( 'info@educal.com', 'lariv' ) );
+    $lariv_contact_info = get_theme_mod( 'lariv_contact_info', false );
+    $lariv_phone_number = get_theme_mod( 'lariv_phone_number', __( '123-456-789', 'lariv' ) );
     $lariv_address = get_theme_mod( 'lariv_address', __( 'Moon ave, New York, 2020 NY US', 'lariv' ) );
     $lariv_address_url = get_theme_mod( 'lariv_address_url', __( 'https://goo.gl/maps/qzqY2PAcQwUz1BYN9', 'lariv' ) );
 
-    // contact button
-	$lariv_button_text = get_theme_mod( 'lariv_button_text', __( 'Contact Us', 'lariv' ) );
-    $lariv_button_link = get_theme_mod( 'lariv_button_link', __( '#', 'lariv' ) );
 
-    // acc button
-	$lariv_acc_button_text = get_theme_mod( 'lariv_acc_button_text', __( 'Login', 'lariv' ) );
-    $lariv_acc_button_link = get_theme_mod( 'lariv_acc_button_link', __( '#', 'lariv' ) );
-
-    // header right
-    $lariv_header_right = get_theme_mod( 'lariv_header_right', false );
-    $lariv_menu_col = $lariv_header_right ? 'col-xxl-7 col-xl-7 col-lg-8 d-none d-lg-block' : 'col-xxl-10 col-xl-10 col-lg-9 d-none d-lg-block text-end';
 
 ?>
 
+
+    <!-- Bg image start-->
+    <div
+      class="bg-img"
+      style="background-image: url('assets/images/show/bg.png')"
+    ></div>
+    <!-- Bg image end-->
+
     <!-- header-area-start -->
-    <header class="relative z-[99]">
+    <header id="header-sticky" class="header-area relative z-[99]">
       <div class="container mx-auto pt-[30px]">
         <div
-          class="flex justify-between rounded-[10px] bg-card px-[15px] py-[30px] md:px-[30px]"
+          class="flex justify-between rounded-[10px] bg-card px-[15px] md:px-[30px]"
         >
           <div class="logo flex items-center">
-            <?php lariv_header_logo();?>
+          <?php lariv_header_logo();?>
           </div>
-          <div class="hidden items-center lg:flex">
-            <nav class="main-menu">
-              <?php lariv_header_menu(); ?>
-            </nav>
-            <!-- <ul class="flex gap-[40px]">
-              <li>
-                <a href="index.html" class="navActive">Home</a>
-              </li>
-              <li>
-                <a href="about.html" class="navNotActive">About Us</a>
-              </li>
-              <li>
-                <a href="portfolio.html" class="navNotActive">Portfolio</a>
-              </li>
-              <li>
-                <a href="service.html" class="navNotActive">Service</a>
-              </li>
-              <li>
-                <a href="blog.html" class="navNotActive">Blog</a>
-              </li>
-              <li>
-                <a href="contact.html" class="navNotActive">Contact</a>
-              </li>
-            </ul> -->
-          </div>
-          <div class="block lg:hidden">
-            <div class="flex items-center gap-4 px-[10px]">
-              <span
-                class="sidebar-open rounded-full border border-[#919295] flex justify-center items-center w-[50px] h-[50px]"
-              >
-                <i class="fa-light fa-bars-sort text-text text-[22px]"></i>
-              </span>
+          <div class="">
+            <div class="menu-area menu-padding">
+              <div class="main-menu">
+                <nav id="mobile-menu">
+                <?php lariv_header_menu();?>
+                </nav>
+              </div>
+            </div>
+            <div class="side-menu-icon lg:hidden text-end">
+              <a
+                href="javascript:void(0)"
+                class="info-toggle-btn f-right sidebar-toggle-btn"
+                ><i class="fal fa-bars"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -76,92 +56,80 @@
     </header>
     <!-- header-area-end -->
 
-    <!-- side bar start -->
-    <div
-      class="sidebar fixed left-[100%] top-0 z-[999] h-full w-full bg-btn/60 transition-all duration-500"
-    >
-      <div
-        class="ml-auto h-full min-h-[750px] w-[300px] bg-card px-[30px] pt-[60px] md:min-h-[700px]"
-      >
-        <div class="relative flex justify-center">
-          <span
-            class="sidebar-close group absolute left-[-78px] rounded-lg bg-card px-[15px] py-[10px] text-[26px]"
-          >
-            <i
-              class="fa-regular fa-xmark text-white transition-all duration-500 group-hover:rotate-90 group-hover:text-theme"
-            ></i>
-          </span>
-          <div>
-            <img
-              src="assets/images/logo.svg"
-              alt="Lariv - React Portfolio Template"
-            />
-          </div>
+    <!-- sidebar area start -->
+    <div class="sidebar__area">
+      <div class="sidebar__wrapper">
+        <div class="sidebar__close">
+          <button class="sidebar__close-btn" id="sidebar__close-btn">
+            <i class="fal fa-times"></i>
+          </button>
         </div>
-        <div class="my-[30px] border-t border-[#ddd]"></div>
-        <nav class="mt-[30px]">
-          <ul class="grid gap-[24px]">
-            <li class="text-[18px] font-semibold">
-              <a href="index.html" class="navActive">Home</a>
-            </li>
-            <li class="text-[18px] font-semibold">
-              <a href="about.html" class="navNotActive">About Us</a>
-            </li>
-            <li class="text-[18px] font-semibold">
-              <a href="portfolio.html" class="navNotActive">Portfolio</a>
-            </li>
-            <li class="text-[18px] font-semibold">
-              <a href="service.html" class="navNotActive">Service</a>
-            </li>
-            <li class="text-[18px] font-semibold">
-              <a href="blog.html" class="navNotActive">Blog</a>
-            </li>
-            <li class="text-[18px] font-semibold">
-              <a href="contact.html" class="navNotActive">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="my-[30px] border-t border-[#ddd]"></div>
-
-        <div class="contact mt-[40px] pb-[20px] md:mt-[0px]">
-          <div>
-            <p class="text-[20px] font-semibold text-white">Follow Me:</p>
-
-            <div class="mt-[20px] flex gap-3">
-              <a href="#">
-                <button
-                  class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
-                >
-                  <i class="fa-brands fa-facebook-f text-[22px]"></i>
-                </button>
-              </a>
-              <a href="#">
-                <button
-                  class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
-                >
-                  <i class="fa-brands fa-twitter text-[22px]"></i>
-                </button>
-              </a>
-              <a href="#">
-                <button
-                  class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
-                >
-                  <i class="fa-brands fa-linkedin-in text-[22px]"></i>
-                </button>
-              </a>
-              <a href="#">
-                <button
-                  class="boxShadow rounded-lg bg-btn w-[40px] h-[40px] flex justify-center items-center text-text shadow-none transition duration-300 hover:text-theme"
-                >
-                  <i class="fa-brands fa-instagram text-[22px]"></i>
-                </button>
-              </a>
-            </div>
+        <div class="sidebar__content">
+          <div class="sidebar__logo mt-[30px] mb-[40px]">
+          <?php lariv_header_logo();?>
           </div>
+          <div class="mobile-menu fix"></div>
+          <?php if ( !empty( $lariv_contact_info ) ): ?>
+          <div class="sidebar__contact mt-[50px] mb-[20px]">
+            <h4><?php echo esc_html__("Contact Info", "lariv"); ?></h4>
+            <ul>
+              <li class="flex items-center gap-3">
+                <div class="sidebar__contact-icon mr-15">
+                  <i class="fal fa-map-marker-alt"></i>
+                </div>
+                <div class="sidebar__contact-text">
+                  <a
+                    target="_blank"
+                    href="https://www.google.com/maps/place/Dhaka/@23.7806207,90.3492859,12z/data=!3m1!4b1!4m5!3m4!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.8104753!4d90.4119873"
+                    >12/A, Mirnada City Tower, NYC</a
+                  >
+                </div>
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="sidebar__contact-icon mr-15">
+                  <i class="far fa-phone"></i>
+                </div>
+                <div class="sidebar__contact-text">
+                  <span>
+                    <?php echo esc_html($lariv_phone_number); ?>
+                  </span>
+                </div>
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="sidebar__contact-icon mr-15">
+                  <i class="fal fa-envelope"></i>
+                </div>
+                <div class="sidebar__contact-text">
+                  <a href="mailto:info@gmail.com">info@gmail.com</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar__social">
+            <ul>
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>
-    <!-- side bar end -->
+
+    <!-- sidebar area end -->
+    <div class="body-overlay"></div>
+    <!-- sidebar area end -->
 
 <!-- header area start -->
 <header class="hidden">
@@ -282,4 +250,3 @@
 </header>
 <!-- header area end -->
 
-<?php get_template_part( 'template-parts/header/header-side-info' ); ?>

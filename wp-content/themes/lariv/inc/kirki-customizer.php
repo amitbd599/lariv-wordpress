@@ -24,7 +24,8 @@ function lariv_customizer_panels_sections( $wp_customize ) {
     /**
      * Customizer Section
      */
-    $wp_customize->add_section( 'header_top_setting', [
+    //! Header Info Setting 
+    $wp_customize->add_section( 'header_info_setting', [
         'title'       => esc_html__( 'Header Info Setting', 'lariv' ),
         'description' => '',
         'priority'    => 10,
@@ -32,38 +33,16 @@ function lariv_customizer_panels_sections( $wp_customize ) {
         'panel'       => 'lariv_customizer',
     ] );
 
-    $wp_customize->add_section( 'header_social', [
-        'title'       => esc_html__( 'Header Social', 'lariv' ),
+    //! Mobile Menu Header 
+    $wp_customize->add_section( 'mobile_menu_header', [
+        'title'       => esc_html__( 'Mobile Menu Header', 'lariv' ),
         'description' => '',
         'priority'    => 11,
         'capability'  => 'edit_theme_options',
         'panel'       => 'lariv_customizer',
     ] );
 
-    $wp_customize->add_section( 'section_header_logo', [
-        'title'       => esc_html__( 'Header Setting', 'lariv' ),
-        'description' => '',
-        'priority'    => 12,
-        'capability'  => 'edit_theme_options',
-        'panel'       => 'lariv_customizer',
-    ] );
-
-    $wp_customize->add_section( 'blog_setting', [
-        'title'       => esc_html__( 'Blog Setting', 'lariv' ),
-        'description' => '',
-        'priority'    => 13,
-        'capability'  => 'edit_theme_options',
-        'panel'       => 'lariv_customizer',
-    ] );
-
-    $wp_customize->add_section( 'header_side_setting', [
-        'title'       => esc_html__( 'Side Info', 'lariv' ),
-        'description' => '',
-        'priority'    => 14,
-        'capability'  => 'edit_theme_options',
-        'panel'       => 'lariv_customizer',
-    ] );
-
+    //! Background Image Setting 
     $wp_customize->add_section( 'background_image_setting', [
         'title'       => esc_html__( 'Background Image Setting', 'lariv' ),
         'description' => '',
@@ -71,6 +50,32 @@ function lariv_customizer_panels_sections( $wp_customize ) {
         'capability'  => 'edit_theme_options',
         'panel'       => 'lariv_customizer',
     ] );
+
+    // $wp_customize->add_section( 'section_header_logo', [
+    //     'title'       => esc_html__( 'Header Setting', 'lariv' ),
+    //     'description' => '',
+    //     'priority'    => 12,
+    //     'capability'  => 'edit_theme_options',
+    //     'panel'       => 'lariv_customizer',
+    // ] );
+
+    // $wp_customize->add_section( 'blog_setting', [
+    //     'title'       => esc_html__( 'Blog Setting', 'lariv' ),
+    //     'description' => '',
+    //     'priority'    => 13,
+    //     'capability'  => 'edit_theme_options',
+    //     'panel'       => 'lariv_customizer',
+    // ] );
+
+    // $wp_customize->add_section( 'header_side_setting', [
+    //     'title'       => esc_html__( 'Side Info', 'lariv' ),
+    //     'description' => '',
+    //     'priority'    => 14,
+    //     'capability'  => 'edit_theme_options',
+    //     'panel'       => 'lariv_customizer',
+    // ] );
+
+   
 
     $wp_customize->add_section( 'blog_setting', [
         'title'       => esc_html__( 'Blog Setting', 'lariv' ),
@@ -147,321 +152,251 @@ function lariv_customizer_panels_sections( $wp_customize ) {
 
 add_action( 'customize_register', 'lariv_customizer_panels_sections' );
 
-function _header_top_fields( $fields ) {
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'lariv_topbar_switch',
-        'label'    => esc_html__( 'Topbar Swicher info', 'lariv' ),
-        'section'  => 'header_top_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'lariv' ),
-            'off' => esc_html__( 'Disable', 'lariv' ),
-        ],
-    ];
+function _header_info_fields( $fields ) {
 
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'lariv_preloader',
-        'label'    => esc_html__( 'Preloader On/Off', 'lariv' ),
-        'section'  => 'header_top_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'lariv' ),
-            'off' => esc_html__( 'Disable', 'lariv' ),
-        ],
-    ];
-
-
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'lariv_backtotop',
-        'label'    => esc_html__( 'Back To Top On/Off', 'lariv' ),
-        'section'  => 'header_top_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'lariv' ),
-            'off' => esc_html__( 'Disable', 'lariv' ),
-        ],
-    ];
-
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'lariv_header_right',
-        'label'    => esc_html__( 'Header Right On/Off', 'lariv' ),
-        'section'  => 'header_top_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'lariv' ),
-            'off' => esc_html__( 'Disable', 'lariv' ),
-        ],
-    ];    
-
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'lariv_search',
-        'label'    => esc_html__( 'Header Search On/Off', 'lariv' ),
-        'section'  => 'header_top_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'lariv' ),
-            'off' => esc_html__( 'Disable', 'lariv' ),
-        ],
-    ];
-
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'lariv_header_lang',
-        'label'    => esc_html__( 'language On/Off', 'lariv' ),
-        'section'  => 'header_top_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'lariv' ),
-            'off' => esc_html__( 'Disable', 'lariv' ),
-        ],
-    ];
-
-    // button
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'lariv_button_text',
-        'label'    => esc_html__( 'Button Text', 'lariv' ),
-        'section'  => 'header_top_setting',
-        'default'  => esc_html__( 'Get A Quote', 'lariv' ),
-        'priority' => 10,
-        'active_callback' => [
-            [
-                'setting'  => 'lariv_header_right',
-                'operator' => '==',
-                'value'    => true,
-            ],
-        ],
-    ];
-
-    $fields[] = [
-        'type'     => 'link',
-        'settings' => 'lariv_button_link',
-        'label'    => esc_html__( 'Button URL', 'lariv' ),
-        'section'  => 'header_top_setting',
-        'default'  => esc_html__( '#', 'lariv' ),
-        'priority' => 10,
-        'active_callback' => [
-            [
-                'setting'  => 'lariv_header_right',
-                'operator' => '==',
-                'value'    => true,
-            ],
-        ],
-    ];
-
-
-    // phone
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'lariv_phone_num',
-        'label'    => esc_html__( 'Phone Number', 'lariv' ),
-        'section'  => 'header_top_setting',
-        'default'  => esc_html__( '+(088) 234 567 899', 'lariv' ),
-        'priority' => 10,
-    ];    
-
-    // email
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'lariv_mail_id',
-        'label'    => esc_html__( 'Mail ID', 'lariv' ),
-        'section'  => 'header_top_setting',
-        'default'  => esc_html__( 'info@lariv.com', 'lariv' ),
-        'priority' => 10,
-    ];    
-
-    // email
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'lariv_address',
-        'label'    => esc_html__( 'Address', 'lariv' ),
-        'section'  => 'header_top_setting',
-        'default'  => esc_html__( 'Moon ave, New York, 2020 NY US', 'lariv' ),
-        'priority' => 10,
-    ];    
-
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'lariv_address_url',
-        'label'    => esc_html__( 'Address URL', 'lariv' ),
-        'section'  => 'header_top_setting',
-        'default'  => esc_html__( 'https://goo.gl/maps/qzqY2PAcQwUz1BYN9', 'lariv' ),
-        'priority' => 10,
-    ];    
-
-    // Login
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'lariv_acc_button_text',
-        'label'    => esc_html__( 'Login', 'lariv' ),
-        'section'  => 'header_top_setting',
-        'default'  => esc_html__( 'Login', 'lariv' ),
-        'priority' => 10,
-    ];    
-
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'lariv_acc_button_link',
-        'label'    => esc_html__( 'Account URL', 'lariv' ),
-        'section'  => 'header_top_setting',
-        'default'  => esc_html__( '#', 'lariv' ),
-        'priority' => 10,
-    ];
-
-    return $fields;
-
-}
-add_filter( 'kirki/fields', '_header_top_fields' );
-
-/*
-Header Social
- */
-function _header_social_fields( $fields ) {
-    // header section social
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'lariv_topbar_fb_url',
-        'label'    => esc_html__( 'Facebook Url', 'lariv' ),
-        'section'  => 'header_social',
-        'default'  => esc_html__( '#', 'lariv' ),
-        'priority' => 10,
-    ];
-
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'lariv_topbar_twitter_url',
-        'label'    => esc_html__( 'Twitter Url', 'lariv' ),
-        'section'  => 'header_social',
-        'default'  => esc_html__( '#', 'lariv' ),
-        'priority' => 10,
-    ];
-
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'lariv_topbar_linkedin_url',
-        'label'    => esc_html__( 'Linkedin Url', 'lariv' ),
-        'section'  => 'header_social',
-        'default'  => esc_html__( '#', 'lariv' ),
-        'priority' => 10,
-    ];
-
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'lariv_topbar_instagram_url',
-        'label'    => esc_html__( 'Instagram Url', 'lariv' ),
-        'section'  => 'header_social',
-        'default'  => esc_html__( '#', 'lariv' ),
-        'priority' => 10,
-    ];
-
-    $fields[] = [
-        'type'     => 'text',
-        'settings' => 'lariv_topbar_youtube_url',
-        'label'    => esc_html__( 'Youtube Url', 'lariv' ),
-        'section'  => 'header_social',
-        'default'  => esc_html__( '#', 'lariv' ),
-        'priority' => 10,
-    ];
-
-
-    return $fields;
-}
-add_filter( 'kirki/fields', '_header_social_fields' );
-
-/*
-Header Settings
- */
-function _header_header_fields( $fields ) {
-   
-
+    
+    //! Lariv Header Logo
     $fields[] = [
         'type'        => 'image',
         'settings'    => 'logo',
         'label'       => esc_html__( 'Header Logo', 'lariv' ),
         'description' => esc_html__( 'Upload Your Logo.', 'lariv' ),
-        'section'     => 'section_header_logo',
+        'section'     => 'header_info_setting',
         'default'     => get_template_directory_uri() . '/assets/images/logo.svg',
     ];
 
+
+
+    //! Lariv Preloader On/Off
     $fields[] = [
-        'type'        => 'image',
-        'settings'    => 'seconday_logo',
-        'label'       => esc_html__( 'Header Secondary Logo', 'lariv' ),
-        'description' => esc_html__( 'Header Logo Black', 'lariv' ),
-        'section'     => 'section_header_logo',
-        'default'     => get_template_directory_uri() . '/assets/images/logo-dark.svg',
+        'type'     => 'switch',
+        'settings' => 'lariv_preloader',
+        'label'    => esc_html__( 'Preloader On/Off', 'lariv' ),
+        'section'  => 'header_info_setting',
+        'default'  => '0',
+        'priority' => 10,
+        'choices'  => [
+            'on'  => esc_html__( 'Enable', 'lariv' ),
+            'off' => esc_html__( 'Disable', 'lariv' ),
+        ],
     ];
 
-  
+//! Lariv Back To Top On/Off
+    $fields[] = [
+        'type'     => 'switch',
+        'settings' => 'lariv_backtotop',
+        'label'    => esc_html__( 'Back To Top On/Off', 'lariv' ),
+        'section'  => 'header_info_setting',
+        'default'  => '0',
+        'priority' => 10,
+        'choices'  => [
+            'on'  => esc_html__( 'Enable', 'lariv' ),
+            'off' => esc_html__( 'Disable', 'lariv' ),
+        ],
+    ];
+
+
+
+
+
+    // // phone
+    // $fields[] = [
+    //     'type'     => 'text',
+    //     'settings' => 'lariv_phone_num',
+    //     'label'    => esc_html__( 'Phone Number', 'lariv' ),
+    //     'section'  => 'header_info_setting',
+    //     'default'  => esc_html__( '+(088) 234 567 899', 'lariv' ),
+    //     'priority' => 10,
+    // ];    
+
+    // // email
+    // $fields[] = [
+    //     'type'     => 'text',
+    //     'settings' => 'lariv_mail_id',
+    //     'label'    => esc_html__( 'Mail ID', 'lariv' ),
+    //     'section'  => 'header_info_setting',
+    //     'default'  => esc_html__( 'info@lariv.com', 'lariv' ),
+    //     'priority' => 10,
+    // ];    
+
+    // // email
+    // $fields[] = [
+    //     'type'     => 'text',
+    //     'settings' => 'lariv_address',
+    //     'label'    => esc_html__( 'Address', 'lariv' ),
+    //     'section'  => 'header_info_setting',
+    //     'default'  => esc_html__( 'Moon ave, New York, 2020 NY US', 'lariv' ),
+    //     'priority' => 10,
+    // ];    
+
+    // $fields[] = [
+    //     'type'     => 'text',
+    //     'settings' => 'lariv_address_url',
+    //     'label'    => esc_html__( 'Address URL', 'lariv' ),
+    //     'section'  => 'header_info_setting',
+    //     'default'  => esc_html__( 'https://goo.gl/maps/qzqY2PAcQwUz1BYN9', 'lariv' ),
+    //     'priority' => 10,
+    // ];    
+
+    // // Login
+    // $fields[] = [
+    //     'type'     => 'text',
+    //     'settings' => 'lariv_acc_button_text',
+    //     'label'    => esc_html__( 'Login', 'lariv' ),
+    //     'section'  => 'header_info_setting',
+    //     'default'  => esc_html__( 'Login', 'lariv' ),
+    //     'priority' => 10,
+    // ];    
+
+    // $fields[] = [
+    //     'type'     => 'text',
+    //     'settings' => 'lariv_acc_button_link',
+    //     'label'    => esc_html__( 'Account URL', 'lariv' ),
+    //     'section'  => 'header_info_setting',
+    //     'default'  => esc_html__( '#', 'lariv' ),
+    //     'priority' => 10,
+    // ];
+
+    return $fields;
+
+}
+add_filter( 'kirki/fields', '_header_info_fields' );
+
+/*
+Mobile menu header
+ */
+function _mobile_menu_header( $fields ) {
+
+    //! Lariv Contact Info On/Off
+    $fields[] = [
+        'type'     => 'switch',
+        'settings' => 'lariv_contact_info',
+        'label'    => esc_html__( 'Contact Info On/Off', 'lariv' ),
+        'section'  => 'mobile_menu_header',
+        'default'  => '0',
+        'priority' => 10,
+        'choices'  => [
+            'on'  => esc_html__( 'Enable', 'lariv' ),
+            'off' => esc_html__( 'Disable', 'lariv' ),
+        ],
+    ];
+    //! Lariv Phone Number
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'lariv_phone_number',
+        'label'    => esc_html__( 'Phone Number', 'lariv' ),
+        'section'  => 'mobile_menu_header',
+        'default'  => esc_html__( '123-456-789', 'lariv' ),
+        'priority' => 10,
+    ];
+
+    //! Lariv Email Id
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'lariv_email_id',
+        'label'    => esc_html__( 'Email Id', 'lariv' ),
+        'section'  => 'mobile_menu_header',
+        'default'  => esc_html__( 'info@demo.com', 'lariv' ),
+        'priority' => 10,
+    ];
+
+    //! Lariv Address
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'lariv_address',
+        'label'    => esc_html__( 'Address', 'lariv' ),
+        'section'  => 'mobile_menu_header',
+        'default'  => esc_html__( '3219 Post Avenue Nashwauk', 'lariv' ),
+        'priority' => 10,
+    ];
+
+    //! Facebook URL
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'lariv_facebook_url',
+        'label'    => esc_html__( 'Facebook URL', 'lariv' ),
+        'section'  => 'mobile_menu_header',
+        'default'  => esc_html__( '#', 'lariv' ),
+        'priority' => 10,
+    ];
+//! Linkedin Url 
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'lariv_linkedin_url',
+        'label'    => esc_html__( 'Linkedin Url', 'lariv' ),
+        'section'  => 'mobile_menu_header',
+        'default'  => esc_html__( '#', 'lariv' ),
+        'priority' => 10,
+    ];
+//! Instagram Url 
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'lariv_instagram_url',
+        'label'    => esc_html__( 'Instagram Url', 'lariv' ),
+        'section'  => 'mobile_menu_header',
+        'default'  => esc_html__( '#', 'lariv' ),
+        'priority' => 10,
+    ];
+
+    //! Youtube Url 
+    $fields[] = [
+        'type'     => 'text',
+        'settings' => 'lariv_youtube_url',
+        'label'    => esc_html__( 'Youtube Url', 'lariv' ),
+        'section'  => 'mobile_menu_header',
+        'default'  => esc_html__( '#', 'lariv' ),
+        'priority' => 10,
+    ];
+
 
     return $fields;
 }
-add_filter( 'kirki/fields', '_header_header_fields' );
-
+add_filter( 'kirki/fields', '_mobile_menu_header' );
 
 /*
-_header_page_title_fields
- */
-function _header_page_title_fields( $fields ) {
-    // background image setting
+Background image setting
+*/
+function _background_image_setting( $fields ) {
+   
+    //! Background Image On/Off 
+    $fields[] = [
+        'type'     => 'switch',
+        'settings' => 'lariv_background_img_switch',
+        'label'    => esc_html__( 'Background Image On/Off', 'lariv' ),
+        'section'  => 'background_image_setting',
+        'default'  => '0',
+        'priority' => 10,
+        'choices'  => [
+            'on'  => esc_html__( 'Enable', 'lariv' ),
+            'off' => esc_html__( 'Disable', 'lariv' ),
+        ],
+    ];
+     //! Background Image 
     $fields[] = [
         'type'        => 'image',
         'settings'    => 'background_bg_img',
         'label'       => esc_html__( 'Background Image', 'lariv' ),
         'description' => esc_html__( 'Background Image', 'lariv' ),
         'section'     => 'background_image_setting',
-        'default'     => get_template_directory_uri() . '/assets/img/page-title/page-title.jpg',
+        'default'     => get_template_directory_uri() . '/lariv/assets/images/',
     ];
+     //! Background Color 
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'lariv_background_bg_color',
-        'label'       => __( 'Breadcrumb BG Color', 'lariv' ),
-        'description' => esc_html__( 'This is a Breadcrumb bg color control.', 'lariv' ),
+        'label'       => __( 'Background Color', 'lariv' ),
+        'description' => esc_html__( 'This is a Background color control.', 'lariv' ),
         'section'     => 'background_image_setting',
         'default'     => '#f4f9fc',
         'priority'    => 10,
     ];
 
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'background_info_switch',
-        'label'    => esc_html__( 'Background Info switch', 'lariv' ),
-        'section'  => 'background_image_setting',
-        'default'  => '1',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'lariv' ),
-            'off' => esc_html__( 'Disable', 'lariv' ),
-        ],
-    ];
-
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'background_switch',
-        'label'    => esc_html__( 'Background Hide', 'lariv' ),
-        'section'  => 'background_image_setting',
-        'default'  => '1',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'lariv' ),
-            'off' => esc_html__( 'Disable', 'lariv' ),
-        ],
-    ];
-
     return $fields;
 }
-add_filter( 'kirki/fields', '_header_page_title_fields' );
+add_filter( 'kirki/fields', '_background_image_setting' );
+
+
+
 
 /*
 Header Social
