@@ -306,7 +306,7 @@ function _mobile_menu_header( $fields ) {
         'settings' => 'lariv_address',
         'label'    => esc_html__( 'Address', 'lariv' ),
         'section'  => 'mobile_menu_header',
-        'default'  => esc_html__( '3219 Post Avenue Nashwauk', 'lariv' ),
+        'default'  => esc_html__( '12/A, Mirnada City Tower, NYC', 'lariv' ),
         'priority' => 10,
     ];
 
@@ -338,11 +338,11 @@ function _mobile_menu_header( $fields ) {
         'priority' => 10,
     ];
 
-    //! Youtube Url 
+    //! Twitter Url 
     $fields[] = [
         'type'     => 'text',
-        'settings' => 'lariv_youtube_url',
-        'label'    => esc_html__( 'Youtube Url', 'lariv' ),
+        'settings' => 'lariv_twitter_url',
+        'label'    => esc_html__( 'Twitter Url', 'lariv' ),
         'section'  => 'mobile_menu_header',
         'default'  => esc_html__( '#', 'lariv' ),
         'priority' => 10,
@@ -374,12 +374,26 @@ function _background_image_setting( $fields ) {
      //! Background Image 
     $fields[] = [
         'type'        => 'image',
-        'settings'    => 'background_bg_img',
+        'settings'    => 'lariv_background_bg_img',
         'label'       => esc_html__( 'Background Image', 'lariv' ),
         'description' => esc_html__( 'Background Image', 'lariv' ),
         'section'     => 'background_image_setting',
-        'default'     => get_template_directory_uri() . '/lariv/assets/images/',
+        'default'     => get_template_directory_uri() . 'assets/images/show/bg-1.jpg',
     ];
+
+        //! Background Image On/Off 
+        $fields[] = [
+            'type'     => 'switch',
+            'settings' => 'lariv_background_color_switch',
+            'label'    => esc_html__( 'Background Color On/Off', 'lariv' ),
+            'section'  => 'background_image_setting',
+            'default'  => '0',
+            'priority' => 10,
+            'choices'  => [
+                'on'  => esc_html__( 'Enable', 'lariv' ),
+                'off' => esc_html__( 'Disable', 'lariv' ),
+            ],
+        ];
      //! Background Color 
     $fields[] = [
         'type'        => 'color',
@@ -387,7 +401,7 @@ function _background_image_setting( $fields ) {
         'label'       => __( 'Background Color', 'lariv' ),
         'description' => esc_html__( 'This is a Background color control.', 'lariv' ),
         'section'     => 'background_image_setting',
-        'default'     => '#f4f9fc',
+        'default'     => '#000',
         'priority'    => 10,
     ];
 

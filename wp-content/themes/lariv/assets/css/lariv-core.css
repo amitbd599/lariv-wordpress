@@ -776,6 +776,12 @@ main {
   position: fixed;
   z-index: 0;
 }
+.bg-color {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  z-index: 0;
+}
 
 .visible {
   visibility: visible;
