@@ -28,17 +28,17 @@ function lariv_widgets_init() {
     $footer_widgets = get_theme_mod( 'footer_widget_number', 4 );
 
     // footer default
-    for ( $num = 1; $num <= $footer_widgets; $num++ ) {
-        register_sidebar( [
-            'name'          => sprintf( esc_html__( 'Footer %1$s', 'lariv' ), $num ),
-            'id'            => 'footer-' . $num,
-            'description'   => sprintf( esc_html__( 'Footer column %1$s', 'lariv' ), $num ),
-            'before_widget' => '<div id="%1$s" class="footer__widget footer-col-'.$num.' mb-50 %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="footer__widget-title">',
-            'after_title'   => '</h3>',
-        ] );
-    }
+    // for ( $num = 1; $num <= $footer_widgets; $num++ ) {
+    //     register_sidebar( [
+    //         'name'          => sprintf( esc_html__( 'Footer %1$s', 'lariv' ), $num ),
+    //         'id'            => 'footer-' . $num,
+    //         'description'   => sprintf( esc_html__( 'Footer column %1$s', 'lariv' ), $num ),
+    //         'before_widget' => '<div id="%1$s" class="footer__widget footer-col-'.$num.' mb-50 %2$s">',
+    //         'after_widget'  => '</div>',
+    //         'before_title'  => '<h3 class="footer__widget-title">',
+    //         'after_title'   => '</h3>',
+    //     ] );
+    // }
 
     // footer 2
     if ( $footer_style_2_switch ) {

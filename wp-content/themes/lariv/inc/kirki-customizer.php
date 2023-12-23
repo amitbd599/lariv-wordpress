@@ -514,104 +514,22 @@ add_filter( 'kirki/fields', '_header_blog_fields' );
 Footer
  */
 function _header_footer_fields( $fields ) {
-    // Footer Setting
-    $fields[] = [
-        'type'        => 'radio-image',
-        'settings'    => 'choose_default_footer',
-        'label'       => esc_html__( 'Choose Footer Style', 'lariv' ),
-        'section'     => 'footer_setting',
-        'default'     => '5',
-        'placeholder' => esc_html__( 'Select an option...', 'lariv' ),
-        'priority'    => 10,
-        'multiple'    => 1,
-        'choices'     => [
-            'footer-style-1'   => get_template_directory_uri() . '/inc/img/footer/footer-1.png',
-            'footer-style-2' => get_template_directory_uri() . '/inc/img/footer/footer-2.png',
-            'footer-style-3' => get_template_directory_uri() . '/inc/img/footer/footer-3.png',
-            'footer-style-4' => get_template_directory_uri() . '/inc/img/footer/footer-4.png',
-        ],
-        'default'     => 'footer-style-1',
-    ];
 
-    $fields[] = [
-        'type'        => 'select',
-        'settings'    => 'footer_widget_number',
-        'label'       => esc_html__( 'Widget Number', 'lariv' ),
-        'section'     => 'footer_setting',
-        'default'     => '4',
-        'placeholder' => esc_html__( 'Select an option...', 'lariv' ),
-        'priority'    => 10,
-        'multiple'    => 1,
-        'choices'     => [
-            '4' => esc_html__( 'Widget Number 4', 'lariv' ),
-            '3' => esc_html__( 'Widget Number 3', 'lariv' ),
-            '2' => esc_html__( 'Widget Number 2', 'lariv' ),
-        ],
-    ];
-
+// ! Footer Logo
     $fields[] = [
         'type'        => 'image',
-        'settings'    => 'lariv_footer_bg',
-        'label'       => esc_html__( 'Footer Background Image.', 'lariv' ),
-        'description' => esc_html__( 'Footer Background Image.', 'lariv' ),
+        'settings'    => 'lariv_footer_logo',
+        'label'       => esc_html__( 'Footer Logo.', 'lariv' ),
         'section'     => 'footer_setting',
     ];
 
-    $fields[] = [
-        'type'        => 'color',
-        'settings'    => 'lariv_footer_bg_color',
-        'label'       => __( 'Footer BG Color', 'lariv' ),
-        'description' => esc_html__( 'This is a Footer bg color control.', 'lariv' ),
-        'section'     => 'footer_setting',
-        'default'     => '#f4f9fc',
-        'priority'    => 10,
-    ];
-
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'footer_style_2_switch',
-        'label'    => esc_html__( 'Footer Style 2 On/Off', 'lariv' ),
-        'section'  => 'footer_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'lariv' ),
-            'off' => esc_html__( 'Disable', 'lariv' ),
-        ],
-    ];    
-
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'footer_style_3_switch',
-        'label'    => esc_html__( 'Footer Style 3 On/Off', 'lariv' ),
-        'section'  => 'footer_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'lariv' ),
-            'off' => esc_html__( 'Disable', 'lariv' ),
-        ],
-    ];
-
-    $fields[] = [
-        'type'     => 'switch',
-        'settings' => 'footer_style_4_switch',
-        'label'    => esc_html__( 'Footer Style 4 On/Off', 'lariv' ),
-        'section'  => 'footer_setting',
-        'default'  => '0',
-        'priority' => 10,
-        'choices'  => [
-            'on'  => esc_html__( 'Enable', 'lariv' ),
-            'off' => esc_html__( 'Disable', 'lariv' ),
-        ],
-    ];
-
+//! Copy Right 
     $fields[] = [
         'type'     => 'text',
         'settings' => 'lariv_copyright',
         'label'    => esc_html__( 'Copy Right', 'lariv' ),
         'section'  => 'footer_setting',
-        'default'  => esc_html__( 'Copyright &copy; 2022 Theme_Pure. All Rights Reserved', 'lariv' ),
+        'default'  => esc_html__( 'Copyright Lariv ©2023-2024. All rights reserved', 'lariv' ),
         'priority' => 10,
     ];
     return $fields;
@@ -620,32 +538,13 @@ add_filter( 'kirki/fields', '_header_footer_fields' );
 
 // color
 function lariv_color_fields( $fields ) {
-    // Color Settings
+    //! Color Settings
     $fields[] = [
         'type'        => 'color',
         'settings'    => 'theme_color_1',
-        'label'       => __( 'Theme Color 1', 'lariv' ),
-        'description' => esc_html__( 'This is a Theme color control.', 'lariv' ),
+        'label'       => __( 'Set Theme Color', 'lariv' ),
         'section'     => 'color_setting',
         'default'     => '#3D6CE7',
-        'priority'    => 10,
-    ];
-    $fields[] = [
-        'type'        => 'color',
-        'settings'    => 'theme_color_2',
-        'label'       => __( 'Theme Color 2', 'lariv' ),
-        'description' => esc_html__( 'This is a Theme color control.', 'lariv' ),
-        'section'     => 'color_setting',
-        'default'     => '#258E46',
-        'priority'    => 10,
-    ];
-    $fields[] = [
-        'type'        => 'color',
-        'settings'    => 'theme_color_3',
-        'label'       => __( 'Theme Color 3', 'lariv' ),
-        'description' => esc_html__( 'This is a Theme color control.', 'lariv' ),
-        'section'     => 'color_setting',
-        'default'     => '#007A70',
         'priority'    => 10,
     ];
     return $fields;

@@ -8,60 +8,47 @@
  * @package lariv
 */
 
-$footer_bg_img = get_theme_mod( 'lariv_footer_bg' );
-$lariv_footer_logo = get_theme_mod( 'lariv_footer_logo' );
-$lariv_footer_top_space = function_exists('get_field') ? get_field('lariv_footer_top_space') : '0';
-$lariv_copyright_center = $lariv_footer_logo ? 'col-lg-4 offset-lg-4 col-md-6 text-right' : 'col-lg-12 text-center';
-$lariv_footer_bg_url_from_page = function_exists( 'get_field' ) ? get_field( 'lariv_footer_bg' ) : '';
-$lariv_footer_bg_color_from_page = function_exists( 'get_field' ) ? get_field( 'lariv_footer_bg_color' ) : '';
-$footer_bg_color = get_theme_mod( 'lariv_footer_bg_color' );
+
+$lariv_footer_logo = get_theme_mod( 'lariv_footer_logo',  __( '', 'lariv' ) );
+$lariv_copyright = get_theme_mod( 'lariv_copyright',  __( 'Copyright Lariv ©2023-2024. All rights reserved', 'lariv' ) );
+
+
 
 // bg image
 $bg_img = !empty( $lariv_footer_bg_url_from_page['url'] ) ? $lariv_footer_bg_url_from_page['url'] : $footer_bg_img;
 
-// bg color
-$bg_color = !empty( $lariv_footer_bg_color_from_page ) ? $lariv_footer_bg_color_from_page : $footer_bg_color;
 
 
-// footer_columns
-$footer_columns = 0;
-$footer_widgets = get_theme_mod( 'footer_widget_number', 4 );
 
-for ( $num = 1; $num <= $footer_widgets; $num++ ) {
-    if ( is_active_sidebar( 'footer-' . $num ) ) {
-        $footer_columns++;
-    }
-}
 
-switch ( $footer_columns ) {
-case '1':
-    $footer_class[1] = 'col-lg-12';
-    break;
-case '2':
-    $footer_class[1] = 'col-lg-6 col-md-6';
-    $footer_class[2] = 'col-lg-6 col-md-6';
-    break;
-case '3':
-    $footer_class[1] = 'col-xl-4 col-lg-6 col-md-5';
-    $footer_class[2] = 'col-xl-4 col-lg-6 col-md-7';
-    $footer_class[3] = 'col-xl-4 col-lg-6';
-    break;
-case '4':
-    $footer_class[1] = 'col-lg-3 col-md-6 col-sm-7';
-    $footer_class[2] = 'col-lg-3 col-md-3 col-sm-5';
-    $footer_class[3] = 'col-lg-3 col-md-3 col-sm-5';
-    $footer_class[4] = 'col-lg-3 col-md-6 col-sm-7';
-    break;
-default:
-    $footer_class = 'col-xl-3 col-lg-3 col-md-6';
-    break;
-}
+
+
+
 
 ?>
 
-<!-- footer area start --> 
+    <!-- footer start -->
+    <footer class="relative z-[9]">
+      <div class="container mx-auto flex justify-center pb-[40px]">
+        <div>
+          <p class="text-center text-text">
+            <?php echo esc_html($lariv_copyright);?>
+          </p>
+          <?php if(!empty($lariv_footer_logo)) : ?>
+          <div class="mt-[20px] flex justify-center text-center">
+            <img
+              src="<?php echo esc_html($lariv_footer_logo);?>"
+              alt="Lariv - React Portfolio Template"
+            />
+          </div>
 
-<footer>
+          <?php endif;?>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+<footer class="hidden">
     <div class="footer__area">
         <?php if ( is_active_sidebar('footer-1') OR is_active_sidebar('footer-2') OR is_active_sidebar('footer-3') OR is_active_sidebar('footer-4') ): ?>
        <div class="footer__top grey-bg-4 pt-95 pb-45" data-bg-color="<?php print esc_attr( $bg_color );?>" data-top-space="<?php print esc_attr($lariv_footer_top_space); ?>px"  data-background="<?php print esc_url( $bg_img );?>">

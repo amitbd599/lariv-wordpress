@@ -29,11 +29,6 @@
     <?php
         $lariv_preloader = get_theme_mod( 'lariv_preloader', false );
         $lariv_backtotop = get_theme_mod( 'lariv_backtotop', false );
-
-        $lariv_preloader_logo = get_template_directory_uri() . '/assets/img/favicon.png';
-
-        $preloader_logo = get_theme_mod('preloader_logo', $lariv_preloader_logo);
-
     ?>
 
         <!-- Preloader Start-->
